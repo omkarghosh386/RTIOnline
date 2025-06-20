@@ -1,3 +1,5 @@
+import RequestList from './pages/RequestList';
+
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -26,6 +28,8 @@ export default function App() {
         <Route path="/first-appeal" element={<FirstAppeal />} />
         <Route path="/submit-rti" element={<SubmitRequest />} />
         <Route path="view-status" element={<ViewStatus />} />
+        <Route path="/rti-requests" element={<RequestList />} />
+
       </Routes>
 
       <Footer />
