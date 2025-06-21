@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import BottomBar from './components/BottomBar';
 import SubmitRequest from './SubmitRequest';
 import ViewStatus from './ViewStatus';
+import Guidelines from './Guidelines';
 
 export default function App() {
   const [active, setActive] = useState('new');
@@ -29,7 +30,7 @@ export default function App() {
         <Route path="/submit-rti" element={<SubmitRequest />} />
         <Route path="view-status" element={<ViewStatus />} />
         <Route path="/rti-requests" element={<RequestList />} />
-
+        <Route path="/guidelines" element={<Guidelines />} />
       </Routes>
 
       <Footer />
