@@ -2,7 +2,7 @@
   --primary-color: #0269b0;
   --secondary-color: #f59e0b;
 
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 1rem;
@@ -200,4 +200,16 @@ button:focus-visible {
 
 .white{
   color: #FFF;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.fa-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: '\f105'; /* Font Awesome Unicode for faAngleRight */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: #6c757d; /* optional: change color */
+  margin: 0 0.5rem;
 }

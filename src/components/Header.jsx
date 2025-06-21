@@ -7,7 +7,7 @@ const Header = () => {
 
   const navigateHome = () => {
     // window.location.href = 'https://rtionline.tripura.gov.in/';  // Home Url
-    window.location.href = '#';
+    window.location.href = '/';
   };
 
   return (
