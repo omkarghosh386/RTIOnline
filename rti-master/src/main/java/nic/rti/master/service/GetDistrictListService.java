@@ -13,8 +13,8 @@ public class GetDistrictListService {
     @Autowired
     private GetDistrictListRepository getDistrictListRepository;
 
-    public List<DistrictList> getDistrictList() {
-        return getDistrictListRepository.findAll();
+    public List<DistrictList> getDistrictList(String stateCode) {
+        return getDistrictListRepository.findByStateCode(stateCode);
     }
 
 }
