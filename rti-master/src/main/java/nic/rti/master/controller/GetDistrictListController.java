@@ -18,7 +18,7 @@ public class GetDistrictListController {
     private GetDistrictListService getDistrictListService;
 
     @GetMapping(value = "/GetDistrictList", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<DistrictList> getDistrictList(@RequestParam String stateCode) {
-        return getDistrictListService.getDistrictList(stateCode);
+    public List<DistrictList> getDistrictList(@RequestParam String state_code) {
+        return getDistrictListService.getDistrictList(state_code);
     }
 }
