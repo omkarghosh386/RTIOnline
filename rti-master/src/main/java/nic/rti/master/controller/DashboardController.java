@@ -9,23 +9,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/aa")
+@RequestMapping("/rti-faa")
 
 public class DashboardController {
-    //rest api endpoint for FE for dashboard data
-    @Autowired
 
+    @Autowired
     private DashboardService dashboardService;
 
-    @GetMapping("/dashboard")
-    public DashboardMetricsDTO dashboardMetricsDTO(@RequestParam String username){
-        return dashboardService.getDashboardDataForUser(username);
+    @GetMapping("/dashboard-summary")
+    public DashboardMetricsDTO getDashboardSummary(
+            @RequestParam("appealId") int appealId,
+            @RequestParam("appealCode") String appealCode
+    ) {
+        return dashboardService.getDashboardData(appealId, appealCode);
     }
-
-    @GetMapping("/test")
-    public String testEndpoint() {
-        return "DashboardController is working!";
-    }
-
-
 }
