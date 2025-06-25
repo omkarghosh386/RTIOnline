@@ -1,4 +1,5 @@
 import React from 'react';
+import VisitorCounter from './VisiterCounter';
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       {/* Desktop Quick Links */}
       <div className="nav justify-content-center d-none d-md-flex border-bottom pb-3 mb-3">
         {[
-          { label: 'Home', href: 'https://rtionline.assam.gov.in/index.php' },
+          { label: 'Home', href: '/' },
           {
             label: 'National Portal of India',
             href: 'https://www.india.gov.in/',
@@ -113,28 +114,7 @@ const Footer = () => {
       </p>
 
       {/* Visitor Counter */}
-      <div className="container mt-2">
-        <div className="d-flex justify-content-center">
-          <div id="counter" className="text-center text-light d-flex">
-            {['2', '7', '0', '9', '5', '3'].map((digit, index) => (
-              <React.Fragment key={index}>
-                <span className="d-none d-md-flex digit bg-light text-primary fw-bold fs-5">
-                  {digit}
-                </span>
-                <span className="d-md-none digit bg-light text-primary fw-bold px-2 py-1 f-xsmall">
-                  {digit}
-                </span>
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-        <div className="d-none d-md-block text-light text-center mt-2">
-          Total Visitors Count
-        </div>
-        <div className="d-md-none text-light text-center mt-2 f-small">
-          Total Visitors Count
-        </div>
-      </div>
+      <VisitorCounter />
     </footer>
   );
 };

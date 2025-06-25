@@ -7,7 +7,7 @@ const BottomBar = () => {
 
   return (
     <Navbar expand="lg" className="p-1" style={{ backgroundColor: '#f0f0f0' }}>
-      <Container className="justify-content-center text-center px-3">
+      <Container fluid className="justify-content-center text-center px-3">
         {/* Desktop view */}
         <div className="d-none d-lg-block">{message}</div>
 
