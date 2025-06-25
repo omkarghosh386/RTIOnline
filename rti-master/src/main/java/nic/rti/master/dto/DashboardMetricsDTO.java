@@ -1,4 +1,5 @@
 package nic.rti.master.dto;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
@@ -7,17 +8,8 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DashboardMetricsDTO {
-    private int appealsPending10Days;
+    private int appealPending;
     private int newAppeals;
-    private int appealUnderProcess;
-    private int commentsFromPIO;
-
-    private String publicAuthorityName;
-    private String role;
-    private String username;
-
-    // blank constructor    // doesnt need any argu
-
-    
-
+    private int appealsUnderProcess;
+    private int commentsReceivedFromPIO;
 }

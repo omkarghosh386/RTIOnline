@@ -3,6 +3,7 @@ package nic.rti.master.service;
 import nic.rti.master.dao.GetOrgTypeRepository;
 import nic.rti.master.entity.OrgType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class GetOrgTypeService {
     private GetOrgTypeRepository orgTypeRepository;
 
     public List<OrgType> getOrgType() {
-        return orgTypeRepository.findAll();
+        return orgTypeRepository.findAll(Sort.by("orgTypeDesc"));
     }
 
 }
