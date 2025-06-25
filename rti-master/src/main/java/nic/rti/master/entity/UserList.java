@@ -19,6 +19,9 @@ public class UserList {
     @Column(name = "username", length = 30)
     private String userName;
 
+    @Column(name="password", length=100)
+    private String password; // new password field
+
     @Column(name = "role", length = 2)
     private String role;
 
@@ -55,6 +58,7 @@ public class UserList {
         return userName;
     }
 
+    public String getPassword(){return password;} // getter for password
     public String getRole() {
         return role;
     }
@@ -98,6 +102,8 @@ public class UserList {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
+    public void setPassword(String password){this.password=password;} // setter for password
 
     public void setRole(String role) {
         this.role = role;
