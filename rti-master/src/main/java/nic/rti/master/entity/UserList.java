@@ -13,7 +13,7 @@ import java.time.OffsetDateTime;
 public class UserList {
 
     @Column(name = "id")
-    private int id;
+    private Integer id; //from int to Integer // int can not be null
 
     @Id
     @Column(name = "username", length = 30)
