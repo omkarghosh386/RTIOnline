@@ -15,9 +15,8 @@ public class GetDepartmentController {
     private GetDepartmentService service;
 
     @GetMapping("/GetDepartmentList")
-    public List<GetDepartment> getDepartments() {
+    public List<GetDepartment> getDepartments()  
+    {
         return service.getAllDepartments();
     }
-
-
 }
